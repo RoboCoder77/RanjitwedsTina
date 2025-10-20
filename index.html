@@ -100,7 +100,7 @@
       #openButton {
         padding: 8px 16px;
         font-size: 14px;
-        margin: 10px 0;
+        margin: 5px 0;
         min-width: 140px;
         position: relative;
         z-index: 100;
@@ -113,13 +113,13 @@
       img {
         object-fit: cover;
         object-position: center top;
-        max-height: calc(100vh - 80px);
+        max-height: calc(100vh - 60px);
       }
       
       #page1, #page2 {
         height: 100vh;
         overflow: hidden;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
       
       #page2.show {
@@ -128,7 +128,7 @@
         align-items: center;
         height: 100vh;
         overflow: hidden;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
       }
     }
 
@@ -178,7 +178,7 @@
       img {
         object-fit: cover;
         object-position: center;
-        max-height: calc(100vh - 80px);
+        max-height: calc(100vh - 70px);
         width: 100%;
         height: auto;
       }
@@ -186,7 +186,7 @@
       #openButton {
         padding: 10px 20px;
         font-size: 16px;
-        margin: 15px 0;
+        margin: 10px 0;
         min-width: 160px;
         position: relative;
         z-index: 100;
@@ -204,7 +204,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
       }
       
       #page2.show {
@@ -219,7 +219,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        padding-bottom: 20px;
+        padding-bottom: 15px;
       }
       
       body {
@@ -227,6 +227,45 @@
         height: 100vh;
         position: fixed;
         width: 100%;
+      }
+    }
+    
+    /* Large phone screens (iPhone Pro Max, Samsung Galaxy, etc.) */
+    @media (min-width: 481px) and (max-width: 768px) {
+      #openButton {
+        padding: 8px 16px;
+        font-size: 14px;
+        margin: 3px 0;
+        min-width: 140px;
+        position: relative;
+        z-index: 100;
+        background-color: #e91e63;
+        color: white;
+        border: 2px solid #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      }
+      
+      img {
+        object-fit: cover;
+        object-position: center top;
+        max-height: calc(100vh - 50px);
+        width: 100%;
+        height: auto;
+      }
+      
+      #page1, #page2 {
+        height: 100vh;
+        overflow: hidden;
+        padding-bottom: 5px;
+      }
+      
+      #page2.show {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        padding-bottom: 5px;
       }
     }
     
