@@ -310,7 +310,7 @@
   </div>
 
   <!-- Optional Background Music -->
-  <audio id="bgMusic" loop>
+  <audio id="bgMusic" loop preload="auto">
     <source src="background.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
@@ -321,13 +321,19 @@
     const openButton = document.getElementById('openButton');
     const bgMusic = document.getElementById('bgMusic');
 
-    openButton.addEventListener('click', () => {
+    openButton.addEventListener('click', async () => {
       page1.style.display = 'none';
-      page2.classList.add('show');
-      page2.classList.add('fade');
+      page2.classList.add('show','fade');
 
-      // Optional: Play background music if added
-      // bgMusic.play();
+      // Try to start audio in the user gesture — required on mobile
+      if (bgMusic) {
+        try {
+          await bgMusic.play();
+        } catch (err) {
+          // Playback was blocked — log and optionally show a small "Enable sound" button
+          console.warn('bgMusic playback prevented by browser:', err);
+        }
+      }
     });
   </script>
 
