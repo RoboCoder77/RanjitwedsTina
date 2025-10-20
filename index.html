@@ -103,6 +103,20 @@
       img {
         object-fit: cover;
         object-position: center top;
+        max-height: calc(100vh - 60px);
+      }
+      
+      #page1, #page2 {
+        height: 100vh;
+        overflow: hidden;
+      }
+      
+      #page2.show {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
       }
     }
 
@@ -147,11 +161,60 @@
       to { opacity: 1; }
     }
 
-    /* Ensure images don't exceed viewport */
+    /* iPhone and small mobile devices */
     @media (max-width: 480px) {
       img {
         object-fit: cover;
         object-position: center;
+        max-height: calc(100vh - 40px);
+        width: 100%;
+        height: auto;
+      }
+      
+      #page1, #page2 {
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      
+      #page2.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+      
+      body {
+        overflow: hidden;
+        height: 100vh;
+        position: fixed;
+        width: 100%;
+      }
+    }
+    
+    /* iPhone 13 specific optimizations */
+    @media (max-width: 428px) and (max-height: 926px) {
+      img {
+        max-height: calc(100vh - 50px);
+        object-fit: contain;
+        object-position: center;
+      }
+      
+      #openButton {
+        margin: 5px 0;
+        padding: 8px 16px;
+        font-size: 14px;
       }
     }
   </style>
