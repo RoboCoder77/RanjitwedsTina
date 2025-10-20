@@ -12,7 +12,7 @@
   <!-- Open Graph Tags for WhatsApp / Social Sharing -->
   <meta property="og:title" content="Tina & Ranjith Wedding Invitation">
   <meta property="og:description" content="Join us to celebrate our wedding on Saturday 27 December 2025!">
-  <meta property="og:image" content="https://robocoder77.github.io/RanjitwedsTina/preview-image.png">
+  <meta property="og:image" content="https://robocoder77.github.io/RanjitwedsTina/preview-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Tina & Ranjith Wedding Invitation - December 27, 2025">
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Tina & Ranjith Wedding Invitation">
   <meta name="twitter:description" content="Join us to celebrate our wedding on Saturday 27 December 2025!">
-  <meta name="twitter:image" content="https://robocoder77.github.io/RanjitwedsTina/preview-image.png">
+  <meta name="twitter:image" content="https://robocoder77.github.io/RanjitwedsTina/preview-image.jpg">
   <meta name="twitter:image:alt" content="Tina & Ranjith Wedding Invitation - December 27, 2025">
   <meta property="og:type" content="website">
 
@@ -96,41 +96,45 @@
     }
 
     /* Mobile optimizations */
-    @media (max-width: 768px) {
-      #openButton {
-        padding: 8px 16px;
-        font-size: 14px;
-        margin: 5px 0;
-        min-width: 140px;
-        position: relative;
-        z-index: 100;
-        background-color: #e91e63;
-        color: white;
-        border: 2px solid #fff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      }
-      
-      img {
-        object-fit: cover;
-        object-position: center top;
-        max-height: calc(100vh - 60px);
-      }
-      
-      #page1, #page2 {
-        height: 100vh;
-        overflow: hidden;
-        padding-bottom: 10px;
-      }
-      
-      #page2.show {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-        padding-bottom: 10px;
-      }
-    }
+@media (max-width: 768px) {
+  #openButton {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 5px 0;
+    min-width: 140px;
+    position: relative;
+    z-index: 100;
+    background-color: #e91e63;
+    color: white;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+    /* raise the button a bit without changing image size */
+    transform: translateY(-6vh);
+    transition: transform 160ms ease;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center top;
+    max-height: calc(100vh - 60px);
+  }
+
+  #page1, #page2 {
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+
+  #page2.show {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-bottom: 10px;
+  }
+}
 
     /* Tablet optimizations */
     @media (min-width: 769px) and (max-width: 1024px) {
