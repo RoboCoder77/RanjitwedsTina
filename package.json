@@ -1,0 +1,27 @@
+{
+  "name": "wedding-invitation",
+  "version": "1.0.0",
+  "description": "Digital wedding invitation for Tina & Ranjith",
+  "main": "index.html",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/index.html",
+    "dev": "live-server --port=3000 --open=/index.html --watch=.",
+    "build": "npm run build:html && npm run build:assets",
+    "build:html": "echo 'HTML files are ready for production'",
+    "build:assets": "echo 'Assets are ready for production'",
+    "serve": "live-server --port=8080 --open=/index.html",
+    "python-serve": "python -m http.server 3000",
+    "python3-serve": "python3 -m http.server 3000"
+  },
+  "keywords": [
+    "wedding",
+    "invitation",
+    "digital",
+    "html"
+  ],
+  "author": "Tina & Ranjith",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
